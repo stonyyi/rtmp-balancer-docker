@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# start haproxy
+service haproxy start
+
+# run consul-template
+/usr/src/consul-template/bin/consul-template -consul=$CONSUL_URI -template="/service/config/haproxy.ctmpl:/etc/haproxy/haproxy.cfg:service haproxy reload"
