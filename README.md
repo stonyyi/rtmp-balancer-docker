@@ -1,4 +1,4 @@
-# rtmp-balancer
+# rtmp-balancer-docker
 
 cine.io [Docker](https://docker.com/) container that balances the rtmp-replicator and rtmp-stylist on different rtmp-endpoints.
 
