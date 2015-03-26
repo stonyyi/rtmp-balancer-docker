@@ -5,7 +5,7 @@ cine.io [Docker](https://docker.com/) container that balances the rtmp-replicato
 # Usage
 
 ```bash
-docker run --name haproxy -d -it -p 80:80 -p 8000:8000 --env CONSUL_URI=192.168.59.103:8500 local/rtmp-balancer
+docker run --name haproxy -d -it -p 1935:1935 -p 1936:1936 -p 8000:8000 --env CONSUL_URI=192.168.59.103:8500 cine/rtmp-balancer-docker
 ```
 
 # Notes
