@@ -31,12 +31,12 @@ listen stats :8000
 listen rtmp :1935
   mode tcp
   balance roundrobin
-  {{range service "rtmp-replicator"}}
+  {{range service "rtmp-replicator-docker"}}
   server {{.Node}} {{.Address}}:{{.Port}}{{end}}
 
 # stylist
 listen rtmp :1936
   mode tcp
   balance roundrobin
-  {{range service "rtmp-stylist"}}
+  {{range service "rtmp-stylist-docker"}}
   server {{.Node}} {{.Address}}:{{.Port}}{{end}}
